@@ -41,7 +41,7 @@
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
               <Component id="jPanel3" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -98,12 +98,12 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="número" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="num1" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="txtNumero1" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="num2" min="-2" pref="70" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="87" max="32767" attributes="0"/>
+                  <Component id="txtNumero2" min="-2" pref="70" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -113,9 +113,9 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="número" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="num1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNumero1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="num2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNumero2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -128,14 +128,14 @@
             <Property name="text" type="java.lang.String" value="N&#xfa;mero 1:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="num1">
+        <Component class="javax.swing.JTextField" name="txtNumero1">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" value="N&#xfa;mero 2:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="num2">
+        <Component class="javax.swing.JTextField" name="txtNumero2">
         </Component>
       </SubComponents>
     </Container>
@@ -174,7 +174,9 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btnRaiz" min="-2" pref="58" max="-2" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -185,6 +187,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnSuma" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="btnResta" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="btnRaiz" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -193,7 +196,7 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton6" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                  <EmptySpace pref="60" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -203,26 +206,46 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="+"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSumaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnResta">
           <Properties>
             <Property name="text" type="java.lang.String" value="-"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRestaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnDiv">
           <Properties>
             <Property name="text" type="java.lang.String" value="/"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDivActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnMulti">
           <Properties>
             <Property name="text" type="java.lang.String" value="*"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMultiActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton6">
           <Properties>
             <Property name="text" type="java.lang.String" value="C"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnRaiz">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="RAIZ"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRaizActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
